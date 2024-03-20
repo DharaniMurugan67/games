@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 2px;
+  width: 306px; /* (100px * 3) + (2px * 2) */
+  margin: 20px auto;
+}
+
+.cell {
+  background-color: #212121;
+  border: 2px solid #424242;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cell.x-clicked {
+  background-color: orange;
+}
+
+.cell.o-clicked {
+  background-color: gray;
+}
+
+.cell:hover {
+  background-color: #333;
+}
+
+#message {
+  margin-top: 20px;
+}
+
+#restart {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#restart:hover {
+  background-color: #45a049;
+}
